@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=VT323&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+.wall{
+    height: 1000px;
+    background-image: url(https://images.unsplash.com/photo-1587457388598-217e7bc673a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+    background-size: contain;
+    background-repeat:repeat-x;
+    background-color: #8f8983;
+    padding-top: 40px;
+}
+
+.atm{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    background:radial-gradient(white, rgb(19, 40, 52));
+    padding: 40px 0;
+    height: 540px;
+    border: black inset 5px;
+    box-shadow: black 0px 0px 20px;
+    border-radius: 10px;
+}
+
+.top-atm{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.top-atm button{
+    margin: 5px;
+}
+
+.screen{
+    background: linear-gradient(green, rgb(58, 240, 22));
+    height: 200px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: grey inset 5px;
+}
+
+.home-btn{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    font-size: 3em;
+}
+
+.withdraw-btn{
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.deposit-btn{
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.asterisk{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    animation: blink 2s none infinite;
+    font-family: 'VT323', monospace;
+}
+
+@keyframes blink{
+    0%{ opacity: 0}
+    49%{opacity: 0}
+    50%{ opacity: 1}
+}
+
+.input-field{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background: black;
+    color: white;
+    border: 1px white solid;
+    font-size: 1.2rem;
+    font-family: 'VT323', monospace;
+}
+
+.user-balance{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    font-family: 'VT323', monospace;
+}
+
+.transaction-msg{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    font-family: 'VT323', monospace;
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 30px 0;
+}
+
+.num-pad{
+    height: 150px;
+    width: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 10px auto;
+    gap: 2px;
+}
+
+.last-btn{
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+
+button{
+    background: linear-gradient(grey, darkgrey);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:active{
+        box-shadow: 0 3px 0 grey;
+        top: 3px;
+}
